@@ -1,0 +1,30 @@
+import os
+import inspect
+
+from utils import run_cmd
+
+
+
+def build__environment__version(envs, map_version_to_tag):
+
+    # build dict consisting e.g. {"env-name": "1.0.0", "env-name-2": "1.0.1"}
+
+    environment__version = {}
+
+    for env in envs:
+
+        # Example: this way you can make some logic to dive into the right container
+        # Modify this according to your env needs.
+        container_name = 'softagram' if env == 'df.softagram.com' else 'analyzer'
+
+        if env == 'df.softagram.com' and os.popen('hostname').read().split()[0] == 'dogfood':
+            # Just directly docker exec without using ssh, when this cmd is executed on df server.
+            cmd = f'docker exec -i {container_name} cat /.version'
+        else:
+            cmd = f'ssh {env} docker exec -i {container_name} cat /.version'
+
+        for line in run_cmd(cmd, 'build__environment__version'):
+            environment__version[env] = map_version_to_tag(line)
+
+    return environment__version
+
