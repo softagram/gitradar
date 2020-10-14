@@ -3,8 +3,6 @@
 
 # Usage
 
-How to run:
-
 ```
 ./gitradar.sh ../../your-repo-dir
 ```
