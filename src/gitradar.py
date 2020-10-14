@@ -275,7 +275,11 @@ def main():
     undef[0] = 'undefined'
     undef[3] = 'undefined'
     undef[4] = 'undefined'
-    screen.tty_signal_keys(undef)
+    
+    # Outcommenting tty_signal_keys call that fails with recent Python 3.8 urwid-2.1.1
+    #     TypeError: tcsetattr: elements of attributes must be characters or integers
+    #
+    # screen.tty_signal_keys(undef)
 
     main_frame = urwid.Frame(
         urwid.Filler(urwid.LineBox(grid_flow), valign="top"))
