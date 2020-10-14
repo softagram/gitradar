@@ -7,6 +7,10 @@ How to run:
 
 ```
 ./gitradar.sh ../../your-repo-dir
+```
+
+![Demo gif](https://github.com/softagram/gitradar/blob/master/gitradar.gif)
+
 
 # Install
 
@@ -23,3 +27,4 @@ instead of plain versions, please customize env mapping:
 ```
 
 And then modify that customizedenvs.py to do your mapping.
+
