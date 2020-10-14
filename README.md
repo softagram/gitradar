@@ -4,7 +4,7 @@
 # Usage
 
 ```
-./gitradar.sh ../../your-repo-dir
+./gitradar.sh path-to-your-git-repo
 ```
 
 ![Demo gif](https://github.com/softagram/gitradar/blob/master/gitradar.gif)
