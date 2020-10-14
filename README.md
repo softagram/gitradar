@@ -14,6 +14,9 @@
 
 Go to panwid/ and run   `python3 setup.py install`
 
+venv can be used to avoid install all the dependencies into global Python space. gitradar.sh is a helper which launches it using python from venv. There is a requirements.txt for getting couple of packages installed.
+
+
 
 ## Advanced config
 
@@ -25,4 +28,8 @@ instead of plain versions, please customize env mapping:
 ```
 
 And then modify that customizedenvs.py to do your mapping.
+
+## Contribute
+
+Documentation, flexibility, etc. needs to be improved.
 
