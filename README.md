@@ -1,6 +1,14 @@
 # gitradar
 
+Helicopter view on the file changes with time dimension.
 
+If you have a x x x x situation for some file, it means you’ve been editing it all the time. 
+
+Practically it means the file is most likely complex and might need splitting up or total rewrite. Or you could plan your work into better bigger tasks to do stuff properly at once.
+
+As an alternative for listing changed files with git diff, this gives wider view on the same go.
+
+See below demo Gif on real world usage.
 # Usage
 
 ```
